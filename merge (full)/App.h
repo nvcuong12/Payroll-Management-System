@@ -52,6 +52,10 @@ public:
      * Chứa vòng lặp chính của chương trình.
      */
     void run();
+    /**
+     * @brief Phương thức chính để lưu danh sách nhân viên hiện tại vào file.
+     */
+    void saveData();
 };
 
 #endif // APP_H

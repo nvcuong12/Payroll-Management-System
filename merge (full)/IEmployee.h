@@ -52,14 +52,15 @@ public:
     const std::string& getAddress() const;
     const std::string& getPhone() const;
     const std::string& getEmail() const;
+    const std::string& getAdditionInfo() const;
     int getExpDay() const;
     int getExpMonth() const;
     int getExpYear() const;
+    std::string getFormattedExpiryDate() const;
 
     // --- Phương thức ảo (có thể override) ---
     virtual int getMonthsWorked() const { return 0; }
-    virtual bool isMaternityLeave() const { return false; }
-    virtual bool isSickLeave() const { return false; }
+    virtual std::string toCsvString() const = 0;
 };
 
 #endif // _IEMPLOYEE_H_

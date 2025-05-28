@@ -137,3 +137,7 @@ void EmployeeManager::printAllPayrolls(const std::string& filename) {
     }
     _payrollPrinter.printToFile(payrollData, filename);
 }
+
+const std::vector<std::shared_ptr<IEmployee>>& EmployeeManager::getEmployees() const {
+    return _employeeList;
+}

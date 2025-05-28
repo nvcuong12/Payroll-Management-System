@@ -1,6 +1,7 @@
 ﻿#include "contractualemployee.h"
 #include "SalaryCalculator.h"
 #include "AttendanceManager.h"
+#include <sstream>
 
 /**
  * @brief Constructor cho lớp ContractualEmployee.
@@ -50,4 +51,18 @@ SalaryDetails ContractualEmployee::calculateSalary(const AttendanceManager& atte
     // Sử dụng SalaryCalculator để tính toán chi tiết
     SalaryCalculator calculator(hourlyRate, overtimeRate, holidayRate);
     return calculator.calculateSalary(attendance, _employeeId, _contractAmount, bonuses, allowances, deductions);
+}
+
+std::string ContractualEmployee::toCsvString() const {
+    std::stringstream ss;
+    ss << getEmployeeType() << ","
+        << _employeeId << ","
+        << _name << ","
+        << _address << ","
+        << _phone << ","
+        << _email << ","
+        << _additionalInfo << "," // Project Name
+        << getFormattedExpiryDate() << "," // Contract End Date
+        << static_cast<long long>(_contractAmount);
+    return ss.str();
 }

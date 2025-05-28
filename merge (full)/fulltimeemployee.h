@@ -24,6 +24,7 @@ public:
     SalaryDetails calculateSalary(const AttendanceManager& attendance, double bonuses, double allowances, double deductions) const override;
     double getBaseSalary() const override;
     int getMonthsWorked() const override;
+    std::string toCsvString() const override;
 };
 
 #endif // _FULLTIMEEMPLOYEE_H_

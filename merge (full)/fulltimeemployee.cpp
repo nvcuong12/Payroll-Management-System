@@ -1,6 +1,7 @@
 ﻿#include "FulltimeEmployee.h"
 #include "SalaryCalculator.h"
 #include "AttendanceManager.h"
+#include <sstream>
 
 /**
  * @brief Constructor cho FulltimeEmployee.
@@ -44,4 +45,18 @@ SalaryDetails FulltimeEmployee::calculateSalary(const AttendanceManager& attenda
 
     SalaryCalculator calculator(hourlyRate, overtimeRate, holidayRate);
     return calculator.calculateSalary(attendance, _employeeId, _baseSalary, bonuses, allowances, deductions);
+}
+
+std::string FulltimeEmployee::toCsvString() const {
+    std::stringstream ss;
+    ss << getEmployeeType() << ","
+        << _employeeId << ","
+        << _name << ","
+        << _address << ","
+        << _phone << ","
+        << _email << ","
+        << _additionalInfo << "," // Experience
+        << getFormattedExpiryDate() << "," // Contract End Date
+        << static_cast<long long>(_baseSalary);
+    return ss.str();
 }

@@ -29,6 +29,7 @@ public:
     std::shared_ptr<IEmployee> findEmployeeById(const std::string& empId) const;
     void displayAllEmployees() const;
     void displayEmployeeDetails(const std::string& empId) const;
+    const std::vector<std::shared_ptr<IEmployee>>& getEmployees() const;
 
     // --- Quản lý Chấm công ---
     void addAttendanceRecord(const AttendanceRecord& record);

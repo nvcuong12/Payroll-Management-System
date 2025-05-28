@@ -1,5 +1,6 @@
 ﻿#include "Intern.h"
 #include "AttendanceManager.h"
+#include <sstream>
 
 /**
  * @brief Constructor cho lớp Intern.
@@ -50,4 +51,18 @@ SalaryDetails Intern::calculateSalary(const AttendanceManager& attendance, doubl
     details.totalSalary = details.basicSalary + details.bonuses + details.allowances - details.deductions;
 
     return details;
+}
+
+std::string Intern::toCsvString() const {
+    std::stringstream ss;
+    ss << getEmployeeType() << ","
+        << _employeeId << ","
+        << _name << ","
+        << _address << ","
+        << _phone << ","
+        << _email << ","
+        << _additionalInfo << "," // University Name
+        << _monthsWorked << "," // Internship Duration string
+        << static_cast<long long>(_stipend);
+    return ss.str();
 }

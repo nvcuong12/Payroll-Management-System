@@ -1,5 +1,6 @@
 ﻿#include "IEmployee.h"
 #include <sstream>
+#include <iomanip>
 
 /**
  * @brief Constructor cho IEmployee, phân tích chuỗi ngày tháng.
@@ -42,6 +43,11 @@ const std::string& IEmployee::getEmail() const
     return _email; 
 }
 
+const std::string& IEmployee::getAdditionInfo() const
+{
+    return _additionalInfo;
+}
+
 int IEmployee::getExpDay() const 
 { 
     return _expDay; 
@@ -55,4 +61,14 @@ int IEmployee::getExpMonth() const
 int IEmployee::getExpYear() const 
 { 
     return _expYear; 
+}
+
+std::string IEmployee::getFormattedExpiryDate() const {
+    if (_expYear == 0 && _expMonth == 0 && _expDay == 0) return _additionalInfo; // Or specific handling for non-date strings
+    if (_expYear == 0) return "N/A";
+    std::stringstream ss;
+    ss << _expYear << "-"
+        << std::setfill('0') << std::setw(2) << _expMonth << "-"
+        << std::setfill('0') << std::setw(2) << _expDay;
+    return ss.str();
 }
