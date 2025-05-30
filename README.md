@@ -37,11 +37,10 @@ Nhóm đề xuất tỉ lệ chia điểm như sau: **Chia đều**.
 
 * **Phân công và theo dõi tiến độ:** Nhóm đã sử dụng Google Docs, GitHub để phân công nhiệm vụ và theo dõi tiến độ. Công việc được chia nhỏ và gán cho từng thành viên dựa trên thế mạnh và sự thống nhất của cả nhóm.
 * **Biên bản họp nhóm:** [*(Link đến thư mục chứa biên bản họp nhóm)*](https://studenthcmusedu-my.sharepoint.com/:f:/g/personal/23120172_student_hcmus_edu_vn/EoEojEnJprtBjMGgZHddJycBAXOOQ0N74ooxMC5Q4w6MxQ?e=QwEb9p). Nhóm đã tổ chức họp trực tuyến qua Google Meet 3 lần, họp trực tiếp 1 lần để báo cáo tiến độ, giải quyết khó khăn và định hướng công việc tiếp theo. Ngoài ra, với những lần phân công công việc, nhóm cũng thường phân công trực tiếp qua Messenger.
-* **Git của từng thành viên:**
+* **Git của từng thành viên:** *[(Link đến repo chính)](https://github.com/nvcuong12/Payroll-Management-System)*
     * **Nguyễn Việt Cường:** [(Link Git)](https://github.com/nvcuong12/Payroll-Management-System/commits/cuong)
     * **Lê Hải Sơn:** [(Link Git)](https://github.com/nvcuong12/Payroll-Management-System/commits/son)
     * **Trần Thị Thủy Tiên:** [(Link Git)](https://github.com/nvcuong12/Payroll-Management-System/commits/tien)
-    * Lịch sử commit trên GitHub *[(Link đến repo chính)](https://github.com/nvcuong12/Payroll-Management-System)* thể hiện sự tham gia đều đặn của các thành viên trong suốt quá trình thực hiện đồ án. Mỗi commit đều có mô tả rõ ràng về thay đổi được thực hiện.
 
 ### 5.2. UI/UX (20%)
 
