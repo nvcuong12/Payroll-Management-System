@@ -36,7 +36,7 @@ Nhóm đề xuất tỉ lệ chia điểm như sau: **Chia đều**.
 ### 5.1. Teamwork (15%)
 
 * **Phân công và theo dõi tiến độ:** Nhóm đã sử dụng Google Docs, GitHub để phân công nhiệm vụ và theo dõi tiến độ. Công việc được chia nhỏ và gán cho từng thành viên dựa trên thế mạnh và sự thống nhất của cả nhóm.
-* **Biên bản họp nhóm:** [*(Link đến thư mục chứa biên bản họp nhóm)*](https://studenthcmusedu-my.sharepoint.com/:f:/g/personal/23120172_student_hcmus_edu_vn/EoEojEnJprtBjMGgZHddJycBAXOOQ0N74ooxMC5Q4w6MxQ?e=QwEb9p). Nhóm đã tổ chức họp trực tuyến qua Google Meet 3 lần để báo cáo tiến độ, giải quyết khó khăn và định hướng công việc tiếp theo. Ngoài ra, với những lần phân công công việc, nhóm cũng thường phân công trực tiếp qua Messenger.
+* **Biên bản họp nhóm:** [*(Link đến thư mục chứa biên bản họp nhóm)*](https://studenthcmusedu-my.sharepoint.com/:f:/g/personal/23120172_student_hcmus_edu_vn/EoEojEnJprtBjMGgZHddJycBAXOOQ0N74ooxMC5Q4w6MxQ?e=QwEb9p). Nhóm đã tổ chức họp trực tuyến qua Google Meet 3 lần, họp trực tiếp 1 lần để báo cáo tiến độ, giải quyết khó khăn và định hướng công việc tiếp theo. Ngoài ra, với những lần phân công công việc, nhóm cũng thường phân công trực tiếp qua Messenger.
 * **Git của từng thành viên:**
     * **(Họ Tên 1):** (Link Git cá nhân 1)
     * **(Họ Tên 2):** (Link Git cá nhân 2)
