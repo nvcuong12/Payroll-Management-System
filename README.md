@@ -4,19 +4,19 @@
 
 ## 1. Thành viên nhóm
 
-| Họ và Tên | MSSV | Vai trò | Link Git |
+| Họ và Tên | MSSV | Vai trò | Tài khoản Github |
 | :--- | :--- | :--- | :--- |
-| **Nguyễn Việt Cường** | **23120116** | **Nhóm trưởng** | [(Link Git cá nhân)](https://github.com/nvcuong12) |
-| Lê Hải Sơn | 23120162 | Thành viên | [(Link Git cá nhân)](https://github.com/haison65) |
-| Trần Thị Thủy Tiên | 23120172 | Thành viên | [(Link Git cá nhân)](https://github.com/ttttien-1003) |
+| **Nguyễn Việt Cường** | **23120116** | **Nhóm trưởng** | [(https://github.com/nvcuong12)](https://github.com/nvcuong12) |
+| Lê Hải Sơn | 23120162 | Thành viên | [(https://github.com/haison65)](https://github.com/haison65) |
+| Trần Thị Thủy Tiên | 23120172 | Thành viên | [(https://github.com/ttttien-1003)](https://github.com/ttttien-1003) |
 
 ## 2. Phân công công việc
 
 | Tên thành viên | Công việc đã thực hiện | Mức độ commit Git |
 | :--- | :--- | :--- |
-| Nguyễn Việt Cường | - Quản lý chung, phân công công việc, theo dõi tiến độ. <br> - Xây dựng module tính lương (`SalaryCalculator`). <br> - Xây dựng module quản lý chấm công (`AttendanceManager`). <br> - Xây dựng module giao diện người dùng. <br> - Quay video demo đồ án. | Đều đặn |
-| Lê Hải Sơn | - Xây dựng các lớp nhân viên cụ thể (`FulltimeEmployee`, `Intern`, `ContractualEmployee`). <br> - Xây dựng module giao diện người dùng CLI (`App`) và định dạng hiển thị (`PayrollPrinter`, `NumberFormatter`). <br> - Xử lý đọc/ghi file CSV chấm công. <br> - Tích hợp các module. <br> - Vẽ class diagram và tạo tài liệu mô tả về các lớp, ý nghĩa các hàm. | Đều đặn |
-| Trần Thị Thủy Tiên | - Thiết kế kiến trúc tổng thể (Lớp `IEmployee`, `IWelfare`). <br> - Xây dựng các lớp nhân viên cụ thể (`FulltimeEmployee`, `Intern`, `ContractualEmployee`). <br> - Xây dựng các lớp phúc lợi cụ thể (`SocialInsuranceWelfare`, `BonusWelfare`, `TransportationWelfare`). <br> - Xây dựng module quản lý phúc lợi (`WelfareManager`). <br> - Xử lý đọc/ghi file danh sách nhân viên. | Đều đặn |
+| Nguyễn Việt Cường | - Quản lý chung, phân công công việc, theo dõi tiến độ. <br> - Xây dựng module tính lương (`SalaryCalculator`). <br> - Xây dựng module quản lý chấm công (`AttendanceManager`). <br> - Xây dựng module giao diện người dùng. <br> - Quay video demo đồ án. <br> - Kiểm tra lại output và nộp đồ án.| Đều đặn |
+| Lê Hải Sơn | - Xây dựng các lớp nhân viên cụ thể (`FulltimeEmployee`, `Intern`, `ContractualEmployee`). <br> - Xây dựng module giao diện người dùng CLI (`App`) và định dạng hiển thị (`PayrollPrinter`, `NumberFormatter`). <br> - Xử lý đọc/ghi file CSV chấm công. <br> - Tích hợp các module. <br> - Vẽ class diagram và tạo tài liệu mô tả về các lớp, ý nghĩa các hàm. <br> - Tạo dữ liệu để test. | Đều đặn |
+| Trần Thị Thủy Tiên | - Thiết kế kiến trúc tổng thể (Lớp `IEmployee`, `IWelfare`). <br> - Xây dựng các lớp nhân viên cụ thể (`FulltimeEmployee`, `Intern`, `ContractualEmployee`). <br> - Xây dựng các lớp phúc lợi cụ thể (`SocialInsuranceWelfare`, `BonusWelfare`, `TransportationWelfare`). <br> - Xây dựng module quản lý phúc lợi (`WelfareManager`). <br> - Xử lý đọc/ghi file danh sách nhân viên. <br> - Viết file README.md. | Đều đặn |
 
 ## 3. Tỉ lệ đóng góp
 
@@ -38,10 +38,10 @@ Nhóm đề xuất tỉ lệ chia điểm như sau: **Chia đều**.
 * **Phân công và theo dõi tiến độ:** Nhóm đã sử dụng Google Docs, GitHub để phân công nhiệm vụ và theo dõi tiến độ. Công việc được chia nhỏ và gán cho từng thành viên dựa trên thế mạnh và sự thống nhất của cả nhóm.
 * **Biên bản họp nhóm:** [*(Link đến thư mục chứa biên bản họp nhóm)*](https://studenthcmusedu-my.sharepoint.com/:f:/g/personal/23120172_student_hcmus_edu_vn/EoEojEnJprtBjMGgZHddJycBAXOOQ0N74ooxMC5Q4w6MxQ?e=QwEb9p). Nhóm đã tổ chức họp trực tuyến qua Google Meet 3 lần, họp trực tiếp 1 lần để báo cáo tiến độ, giải quyết khó khăn và định hướng công việc tiếp theo. Ngoài ra, với những lần phân công công việc, nhóm cũng thường phân công trực tiếp qua Messenger.
 * **Git của từng thành viên:**
-    * **(Họ Tên 1):** (Link Git cá nhân 1)
-    * **(Họ Tên 2):** (Link Git cá nhân 2)
-    * **(Họ Tên 3):** (Link Git cá nhân 3)
-    * Lịch sử commit trên GitHub *(Link đến repo chính)* thể hiện sự tham gia đều đặn của các thành viên trong suốt quá trình thực hiện đồ án. Mỗi commit đều có mô tả rõ ràng về thay đổi được thực hiện.
+    * **Nguyễn Việt Cường:** [(Link Git)](https://github.com/nvcuong12/Payroll-Management-System/commits/cuong)
+    * **Lê Hải Sơn:** [(Link Git)](https://github.com/nvcuong12/Payroll-Management-System/commits/son)
+    * **Trần Thị Thủy Tiên:** [(Link Git)](https://github.com/nvcuong12/Payroll-Management-System/commits/tien)
+    * Lịch sử commit trên GitHub *[(Link đến repo chính)](https://github.com/nvcuong12/Payroll-Management-System)* thể hiện sự tham gia đều đặn của các thành viên trong suốt quá trình thực hiện đồ án. Mỗi commit đều có mô tả rõ ràng về thay đổi được thực hiện.
 
 ### 5.2. UI/UX (20%)
 
