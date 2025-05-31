@@ -14,8 +14,8 @@
 
 | Tên thành viên | Công việc đã thực hiện | Mức độ commit Git |
 | :--- | :--- | :--- |
-| Nguyễn Việt Cường | - Quản lý chung, phân công công việc, theo dõi tiến độ. <br> - Xây dựng module tính lương (`SalaryCalculator`). <br> - Xây dựng module quản lý chấm công (`AttendanceManager`). <br> - Xây dựng module giao diện người dùng (`App`). <br> - Quay video demo đồ án. <br> - Kiểm tra lại output và nộp đồ án.| Đều đặn |
-| Lê Hải Sơn | - Xây dựng các lớp nhân viên cụ thể (`FulltimeEmployee`, `Intern`, `ContractualEmployee`). <br> - Xây dựng module giao diện người dùng CLI (`App`) và định dạng hiển thị (`PayrollPrinter`, `NumberFormatter`). <br> - Xử lý đọc/ghi file CSV chấm công. <br> - Tích hợp các module. <br> - Vẽ class diagram và tạo tài liệu mô tả về các lớp, ý nghĩa các hàm. <br> - Tạo dữ liệu để test. | Đều đặn |
+| Nguyễn Việt Cường | - Xây dựng module quản lý các tác động đến thông tin nhân viên (`EmployeeManager`). <br> - Xây dựng module tính lương (`SalaryCalculator`). <br> - Xây dựng module quản lý chấm công (`AttendanceManager`). <br> - Xây dựng module giao diện người dùng CLI (`App`). <br> - Quay video demo đồ án. <br> - Kiểm tra lại output và nộp đồ án.| Đều đặn |
+| Lê Hải Sơn | - Xây dựng các lớp nhân viên cụ thể (`FulltimeEmployee`, `Intern`, `ContractualEmployee`). <br> - Xây dựng module định dạng hiển thị (`PayrollPrinter`, `NumberFormatter`). <br> - Xử lý đọc/ghi file CSV chấm công. <br> - Xây dựng module tính lương (`SalaryCalculator`). <br> - Vẽ class diagram và tạo tài liệu mô tả về các lớp, ý nghĩa các hàm. <br> - Tạo dữ liệu để test. | Đều đặn |
 | Trần Thị Thủy Tiên | - Thiết kế kiến trúc tổng thể (Lớp `IEmployee`, `IWelfare`). <br> - Xây dựng các lớp nhân viên cụ thể (`FulltimeEmployee`, `Intern`, `ContractualEmployee`). <br> - Xây dựng các lớp phúc lợi cụ thể (`SocialInsuranceWelfare`, `BonusWelfare`, `TransportationWelfare`). <br> - Xây dựng module quản lý phúc lợi (`WelfareManager`). <br> - Xử lý đọc/ghi file danh sách nhân viên. <br> - Viết file README.md. | Đều đặn |
 
 ## 3. Tỉ lệ đóng góp
@@ -57,9 +57,9 @@ Nhóm đề xuất tỉ lệ chia điểm như sau: **Chia đều**.
     * **Lưu/Tải dữ liệu:** Chương trình có khả năng lưu và tải danh sách nhân viên từ file (`employee_list.txt`), giúp duy trì dữ liệu giữa các lần chạy.
     * **Giao diện dòng lệnh (CLI):** Cung cấp menu tương tác cho người dùng.
 * **Giao diện bố trí hợp lí (3%):**
-    * Giao diện CLI được thiết kế rõ ràng, có hướng dẫn cụ thể cho từng chức năng.
+    * Giao diện CLI được thiết kế rõ ràng, có hướng dẫn cụ thể cho từng chức năng (`App.cpp`).
     * Thông tin hiển thị (danh sách nhân viên, chi tiết, phiếu lương) được định dạng cơ bản, dễ nhìn.
-    * Sử dụng `NumberFormatter` và `CultureInfo` để định dạng số tiền theo chuẩn Việt Nam, giúp dễ đọc hơn.
+    * Sử dụng `NumberFormatter` và `CultureInfo` để định dạng số tiền theo chuẩn Việt Nam (hoặc Hoa Kỳ), giúp dễ đọc hơn.
 
 ### 5.3. Kiến trúc phần mềm + Design Pattern (20%)
 
@@ -67,10 +67,10 @@ Nhóm đề xuất tỉ lệ chia điểm như sau: **Chia đều**.
     * Nhóm đã áp dụng kiến trúc **Lớp (Layered Architecture)** ở mức cơ bản:
         * **Lớp Trình bày (Presentation):** Lớp `App` và `PayrollPrinter` xử lý tương tác người dùng và hiển thị dữ liệu.
         * **Lớp Nghiệp vụ (Business Logic):** Các lớp `EmployeeManager`, `SalaryCalculator`, `WelfareManager`, `AttendanceManager` chứa các quy tắc và logic chính của hệ thống.
-        * **Lớp Dữ liệu (Data - Mức cơ bản):** Việc đọc/ghi file đóng vai trò lưu trữ dữ liệu.
+        * **Lớp Dữ liệu (Data - Mức cơ bản):** Việc đọc/ghi file (`employee_list.txt`, `attendance.csv`) đóng vai trò lưu trữ dữ liệu.
     * Thiết kế hướng module, tách biệt các chức năng chính (Quản lý nhân viên, Chấm công, Phúc lợi, Tính lương).
 * **Nguyên tắc OOP:**
-    * **Tính đóng gói (Encapsulation):** Dữ liệu được che giấu trong các lớp, chỉ truy cập qua các phương thức công khai.
+    * **Tính đóng gói (Encapsulation):** Dữ liệu được che giấu trong các lớp, chỉ truy cập qua các phương thức công khai (`IEmployee.h`, `IWelfare.h`).
     * **Tính kế thừa (Inheritance):** Sử dụng `IEmployee` làm lớp cơ sở cho các loại nhân viên, `IWelfare` làm giao diện cho các loại phúc lợi.
     * **Tính đa hình (Polymorphism):** Sử dụng con trỏ/tham chiếu lớp cơ sở (`IEmployee*`, `IWelfare*`) để làm việc với các đối tượng cụ thể, gọi các phương thức ảo (`getEmployeeType`, `calculateSalary`, `calculateImpact`).
     * **Tính trừu tượng (Abstraction):** Lớp `IEmployee` và `IWelfare` là các lớp trừu tượng, định nghĩa giao diện chung.
@@ -80,7 +80,7 @@ Nhóm đề xuất tỉ lệ chia điểm như sau: **Chia đều**.
 
 ### 5.4. Đảm bảo chất lượng (20%)
 
-* **Test:** *(Mô tả cách thức test, ví dụ: Test thủ công các chức năng, test đơn vị (nếu có)).* Nhóm đã thực hiện test thủ công các luồng chính: Thêm/Xóa nhân viên, tải chấm công, tính lương và in phiếu lương cho từng loại nhân viên với các trường hợp dữ liệu khác nhau (ví dụ: có tăng ca, có đi làm ngày lễ,...). Đã kiểm tra kết quả tính lương với file `payroll_export.txt`.
+* **Test:** Nhóm đã thực hiện test thủ công các luồng chính: Thêm/Xóa nhân viên, tải chấm công, tính lương và in phiếu lương cho từng loại nhân viên với các trường hợp dữ liệu khác nhau (ví dụ: có tăng ca, có đi làm ngày lễ,...). Đã kiểm tra kết quả tính lương với file `payroll_export.txt`.
 * **Coding Convention:**
     * Nhóm đã cố gắng tuân thủ coding convention (Google C++ Style Guide) về cách đặt tên biến, hàm, lớp. Tuy nhiên, do trong quá trình thực hiện đồ án, có một số hàm phát sinh không biết trước cũng như code do nhiều thành viên gửi về, cách đặt tên sẽ không quá đồng nhất. Với vấn đề này, tập thể thành viên của nhóm sẽ chịu trách nhiệm.
     * Sử dụng comment (đặc biệt là Doxygen-style trong file `.h`) để giải thích mục đích của các lớp và phương thức, giúp tăng khả năng đọc hiểu và bảo trì code.
@@ -92,8 +92,8 @@ Nhóm đề xuất tỉ lệ chia điểm như sau: **Chia đều**.
 * **Tài liệu:** Chính là file `README.md` này, cùng với các comment Doxygen trong mã nguồn.
 * **Mô tả kiến trúc:** Đã được mô tả ở mục 5.3.
 * **Mô tả các module:**
-    * **`IEmployee` & Derivatives:** Định nghĩa các loại nhân viên và hành vi cơ bản.
-    * **`IWelfare` & Derivatives:** Định nghĩa các loại phúc lợi, cách tính và điều kiện áp dụng.
+    * **`IEmployee` & Derivatives:** Định nghĩa các loại nhân viên và hành vi cơ bản (`IEmployee.h`, `FulltimeEmployee.h`, `Intern.h`, `ContractualEmployee.h`)
+    * **`IWelfare` & Derivatives:** Định nghĩa các loại phúc lợi, cách tính và điều kiện áp dụng (`IWelfare.h`, `SocialInsuranceWelfare.h`, `BonusWelfare.h`, `TransportationWelfare.h`).
     * **`EmployeeManager`:** Module trung tâm, điều phối việc quản lý nhân viên, phúc lợi và tính lương.
     * **`AttendanceManager`:** Quản lý dữ liệu chấm công.
     * **`WelfareManager`:** Quản lý và tính toán tổng hợp các phúc lợi.
@@ -107,7 +107,7 @@ Nhóm đề xuất tỉ lệ chia điểm như sau: **Chia đều**.
 * **Design Patterns:** Sử dụng Strategy Pattern và Simple Factory như đã mô tả ở mục 5.3.
 * **Quản lý bộ nhớ thông minh:** Sử dụng `std::unique_ptr` và `std::shared_ptr` để quản lý vòng đời đối tượng.
 * **Xử lý File I/O:** Đọc và ghi dữ liệu từ các file text (`.txt`) và CSV (`.csv`), sử dụng `fstream` và `sstream`.
-* **Sử dụng STL:** Vận dụng hiệu quả các cấu trúc dữ liệu (`std::vector`, `std::map`) và thuật toán (`std::remove_if`) từ Standard Template Library.
+* **Sử dụng STL:** Vận dụng hiệu quả các cấu trúc dữ liệu (`std::vector`, `std::map`, `std::set`) và thuật toán (`std::remove_if`, `std::all_of`) từ Standard Template Library.
 * **Thiết kế Giao diện Phúc lợi Linh hoạt:** Kiến trúc `IWelfare` cho phép dễ dàng mở rộng hệ thống bằng cách thêm các loại phúc lợi mới mà không cần sửa đổi nhiều code hiện có, thể hiện nguyên tắc Open/Closed.
 
 ## 6. Video Demo
