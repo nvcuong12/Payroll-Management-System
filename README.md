@@ -52,7 +52,10 @@ Nhóm đề xuất tỉ lệ chia điểm như sau: **Chia đều**.
     * **Quản lý nhiều loại nhân viên:** Hỗ trợ nhân viên chính thức, hợp đồng và thực tập sinh, mỗi loại có cách tính lương riêng.
     * **Quản lý chấm công:** Tải và xử lý dữ liệu chấm công từ file CSV (`attendance.csv`), phân biệt giờ làm bình thường, tăng ca và ngày lễ.
     * **Quản lý phúc lợi linh hoạt:** Xây dựng hệ thống phúc lợi (`IWelfare`) cho phép dễ dàng thêm/bớt các loại phúc lợi (BHXH, Thưởng, Trợ cấp đi lại).
-    * **Tính lương tự động:** Tính lương chi tiết dựa trên giờ công và phúc lợi.
+    * **Tính lương tự động:** Tính lương chi tiết dựa trên giờ công và phúc lợi (nếu nhân viên phù hợp với yêu cầu của từng loại phúc lợi). Một số yêu cầu hiện tại:
+       * **Bảo hiểm xã hội:** Những nhân viên đã làm việc cho công ty từ 6 tháng trở lên sẽ được công ty trả tiền BHXH.
+       * **Phụ cấp di chuyển:** Công ty hiện đang có mặt tại Thủ Đức (TP.HCM), với mỗi 4.000vnđ/km, phụ cấp di chuyển sẽ bằng số km từ địa chỉ (trong các vùng lân cận với công ty) của nhân viên * 4.000vnđ. Hiện tại, gần như tất cả các nhân viên đều được hưởng phúc lợi này (nếu có địa chỉ nằm trong vùng nhận được trợ cấp của công ty).
+       * **Tiền thưởng năng suất:** Trong một tháng, nếu nhân viên đi làm đủ 3 loại ngày (normal, overtime, holiday) thì sẽ được thưởng thêm 2.000.000vnđ.
     * **In phiếu lương:** Hỗ trợ in phiếu lương cho từng nhân viên hoặc toàn bộ nhân viên ra file (`payroll_export.txt`), có định dạng số tiền dễ đọc.
     * **Lưu/Tải dữ liệu:** Chương trình có khả năng lưu và tải danh sách nhân viên từ file (`employee_list.txt`), giúp duy trì dữ liệu giữa các lần chạy.
     * **Giao diện dòng lệnh (CLI):** Cung cấp menu tương tác cho người dùng.
