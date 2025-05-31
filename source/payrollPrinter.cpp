@@ -56,9 +56,9 @@ void PayrollPrinter::printPaySlip(const std::shared_ptr<IEmployee>& emp, const S
 
     int w=0, h=0;
     getConsoleWindowSize(w, h);
-    int tab = w/4 +2;
+    int tab = w/4 +15;
 
-    gotoXY(col2X_label+tab, currentLineY++); std::cout << "Ma NV: " << emp->getEmployeeId() << " | Ten: " << emp->getName();
+    gotoXY(col2X_label+tab+12, currentLineY++); std::cout << "Ma NV: " << emp->getEmployeeId() << " | Ten: " << emp->getName();
     gotoXY(col2X_label+tab, currentLineY++); std::cout << std::string(59, '-'); // Điều chỉnh độ dài
 
     gotoXY(col2X_label+tab, currentLineY); std::cout << std::left << std::setw(23) << "Luong co ban:"; // Tăng setw
