@@ -51,77 +51,11 @@ std::shared_ptr<IEmployee> EmployeeManager::findEmployeeById(const std::string& 
     return nullptr;
 }
 
-// /**
-//  * @brief Hiển thị thông tin cơ bản của tất cả nhân viên.
-//  */
-// void EmployeeManager::displayAllEmployees(int frameX, int frameY, int frameWidth, int frameHeight) const {
-//     int titleY = frameY + FRAME_TITLE_Y_OFFSET; // Tiêu đề "DANH SACH NHAN VIEN" do App::run in
-//     int headerY = titleY + 2; // Dòng cho tiêu đề cột
-//     int contentStartX = frameX + FRAME_CONTENT_START_X_OFFSET;
-//     int currentDataY = headerY + 2; // Dòng bắt đầu in dữ liệu nhân viên
-
-//     // In tiêu đề cột
-//     // (frameWidth - 10 - 25 - (2*FRAME_CONTENT_START_X_OFFSET)) > 20 ? (frameWidth - 10 - 25 - (2*FRAME_CONTENT_START_X_OFFSET)) : 20
-//     gotoXY(contentStartX, headerY); 
-//     std::cout << std::left 
-//               << std::setw(10) << "Ma NV"
-//               << std::setw(35) << "Ho Ten" // Ước lượng độ rộng cột
-//               << std::setw(30) << "Dia Chi"
-//               << std::setw(30) << "Email"
-//               << std::setw(25) << "Loai NV";
-    
-//     gotoXY(contentStartX, headerY + 1);
-//     std::cout << std::string(frameWidth - (2*FRAME_CONTENT_START_X_OFFSET) + (FRAME_CONTENT_START_X_OFFSET/2) , '-');
-
-
-//     if (_employeeList.empty()) {
-//         gotoXY(contentStartX, currentDataY); std::cout << "Danh sach nhan vien trong.";
-//         return;
-//     }
-
-//     int linesPrintedOnPage = 0;
-//     // Số dòng tối đa cho nội dung dữ liệu trên một trang
-//     int maxLinesPerPage = frameHeight - (headerY + 2 - frameY) // Khoảng cách từ đỉnh khung đến bắt đầu dữ liệu
-//                            - FRAME_FOOTER_Y_OFFSET -1; // Trừ footer của App và 1 dòng đệm
-
-
-//     for (const auto& emp : _employeeList) {
-//         if (linesPrintedOnPage >= maxLinesPerPage || currentDataY >= frameY + frameHeight - FRAME_FOOTER_Y_OFFSET -1 ) {
-//             gotoXY(contentStartX, frameY + frameHeight - FRAME_FOOTER_Y_OFFSET); 
-//             std::cout << "Nhan phim bat ky de xem tiep...";
-//             getch();
-            
-//             // Xóa phần nội dung cũ của danh sách để vẽ trang mới
-//             for(int i = 0; i < linesPrintedOnPage; ++i) {
-//                 gotoXY(contentStartX, (headerY + 2) + i); 
-//                 std::cout << std::string(frameWidth - (2*FRAME_CONTENT_START_X_OFFSET) + (FRAME_CONTENT_START_X_OFFSET/2), ' ');
-//             }
-//             currentDataY = headerY + 2; // Đặt lại Y cho dữ liệu trang mới
-//             linesPrintedOnPage = 0;
-//         }
-//         gotoXY(contentStartX, currentDataY++);
-//         std::cout << std::left 
-//                   << std::setw(10) << emp->getEmployeeId()
-//                   << std::setw(35) << emp->getName()
-//                   << std::setw(30) << emp->getAddress()
-//                   << std::setw(30) << emp->getEmail()
-//                   << std::setw(25) << emp->getEmployeeType();
-//         linesPrintedOnPage++;
-//     }
-// }
-
 const int APP_TITLE_Y_OFFSET_FOR_EMP_MGR = 1; 
 const int TABLE_CONTENT_START_X_OFFSET = 3;
 const int APP_FOOTER_Y_OFFSET_FOR_EMP_MGR = 1;
 
 void EmployeeManager::displayAllEmployees(int frameX, int frameY, int frameWidth, int frameHeight) const {
-    // Tiêu đề "DANH SACH NHAN VIEN" (ví dụ) đã được App::run() in ở 
-    // frameY + APP_TITLE_Y_OFFSET_FOR_EMP_MGR (hoặc tương tự)
-    
-    // Dòng Y cho tiêu đề cột (Ma NV, Ho Ten, ...)
-    // Phải tính toán dựa trên frameY và các offset tiêu đề của App::run()
-    // Giả sử App::run() đã in tiêu đề ở frameY + 1, gạch ngang ở frameY + 2
-    // thì header của bảng sẽ bắt đầu từ frameY + 4 hoặc frameY + 5
     int tableHeaderY = frameY + APP_TITLE_Y_OFFSET_FOR_EMP_MGR + 2; // Điều chỉnh dựa trên tiêu đề của App::run()
     
     int contentTableStartX = frameX + TABLE_CONTENT_START_X_OFFSET;
@@ -266,7 +200,7 @@ void EmployeeManager::displayEmployeeDetails(const std::string& empId) const {
     printCenteredText(separator, detailFrameY1 + FRAME_SEPARATOR_Y_OFFSET, windowWidth);
 
     if (!emp) {
-        gotoXY(detailFrameX1 + FRAME_CONTENT_START_X_OFFSET, detailFrameY1 + FRAME_CONTENT_START_Y_OFFSET);
+        gotoXY(detailFrameX1 + FRAME_CONTENT_START_X_OFFSET+78, detailFrameY1 + FRAME_CONTENT_START_Y_OFFSET);
         std::cout << "Khong tim thay nhan vien voi ma ID: " << empId;
         // App::run() sẽ hiển thị "Nhan phim bat ky..." sau khi hàm này kết thúc
     } else {
